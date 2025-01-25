@@ -1,78 +1,22 @@
-% Ta datoteka vsebuje osnove LaTeXa. Uporabite jo tako, da primerjate njeno vsebino z
-% generirano datoteko PDF.
-
-% Kogar zanima več LaTeXu, lahko obišče https://www.latex-project.org
-
-% LaTeX sprejme eno ali več datotek .tex in naredi PDF. Ena od .tex datotek je glavna in
-% iz nje vključimo ostale (tega zaenkrat ne bomo počeli). V datoteko .tex pišemo besedilo
-% in ukaze.
-
-% Komentarji se začnejo z znakom % in veljajo do konca vrstice. Kar napišete v komentar,
-% LaTeX ignorira.
-
-% Dokument se začne z ukazom \documentclass. Ukaz \documentclass ima v [...] nastavitve in v {...} tip dokumenta.
 
 \documentclass[a4paper]{article}
 
-
-% LaTeX ima veliko število tipov dokumentov, najboj pogosti so:
-%   article - članek
-%   amsart - članki za revije American Mathematical Society
-%   beamer - prosojnice za predavanje
-%   book - knjiga
-%   letter - pismo
-
-% Nastavitve so odvisne od tipa dokumenta, nekatere običajne so: a4paper ... format
-% strani naj bo A4 (namesto ameriški letter) 10pt, 11pt, 12pt ... velikost pisave
-
-% Sledi PREAMBULA, kjer se še ne piše nobenega besedila, ampak samo ukaze in nastavitve.
-
-% LaTeX ima veliko število zelo uporabnih paketov. Običajno najprej povemo, katere pakete
-% bomo uporabljali. To naredimo z ukazom \usepackage[...]{...} kjer v [...] damo dodatne
-% nastavitve za paket in v {...} ime paketa.
-
-% Za slovenščino moramo nastaviti kodno tabelo datoteke .tex in kodno tabelo datoteke
-% PDF, da se pravilno obravnava šumnike. LaTeXu povemo tudi, da uporabljamo slovenščino
-% (da pravilno prikaže datum ipd).
-
 \usepackage[utf8]{inputenc}   % vhodna datoteka je kodirana v sistemu UTF-8
 
-% Ostale možnosti za kodiranje so:
-%\usepackage[cp1250]{inputenc}   % Kodirna tabela za Windows, zastarelo
-%\usepackage[latin2]{inputenc}   % Kodirna tabela za Linux, zastarelo
-
-% Ker smo nastavili vhodno datoteko .tex na UTF-8, moramo poskrbeti,
-% da tudi urejevalnik, s katerim urejamo .tex, uporablja UTF-8.
-% V Visual Studio code je ta nastavitev spodaj desno.
 
 \usepackage[T1]{fontenc}      % izhodna datoteka je kodirana v sistemu T1
 
-% uporabljamo slovenščino (s tem nastavimo delilne vzorce, format datuma, slovensko ime
-% za "abstract" ipd.
+
 \usepackage[slovene]{babel}
 
-% Nastavimo lahko tudi razne pisave, glej http://www.tug.dk/FontCatalogue/
-% Za slovenščino je dobro nastaviti novejšo inačico pisave lmodern
 
 \usepackage{lmodern}            % Boljši fonti, s pravimi šumniki
-% Ostale pogoste izbire pisav:
-% \usepackage{times}            % Times New Roman
-% \usepackage{palatino}         % Palatino
-% \usepackage{concrete}         % Pisava, ki jo je uporabil Donald Knuth v knjigi "Concrete mathematics"
-
-% S tem smo zaključili pakete in nastavitve za slovenščino. Ostali paketi
-% in nastavitve so odvisni od tega, kaj bomo počeli. V tej datoteki bomo
-% prikazali osnove in hiper-povezave.
 
 \usepackage{hyperref}            % Paket za povezave znotraj dokumenta in hiper-povezave
 
-% To je konec preambule
-
-% Sledi vsbina dokumenta, ki se začne z ukazom \begin{document} in konča z \end{document}.
 
 \begin{document}
 
-% Nastavimo naslov in avtorja.
 
 \title{Osnovno o {\LaTeX}u}
 \author{Andrej Bauer}
